@@ -3,7 +3,6 @@ package com.laptrinhjavaweb.controller.web;
 import com.laptrinhjavaweb.model.UserModel;
 
 import java.io.IOException;
-import java.lang.ProcessBuilder.Redirect;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,16 +17,18 @@ public class HomeController extends HttpServlet {
 	private static final long serialVersionUID = 2686801510274002166L;
 
 	
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        UserModel userModel = new UserModel();
+    protected void doGet(final HttpServletRequest request, final HttpServletResponse response)
+            throws ServletException, IOException {
+        final UserModel userModel = new UserModel();
         userModel.setFullName("Truong phan qui");
 
-        request.setAttribute("model",userModel);
-        RequestDispatcher rd = request.getRequestDispatcher("/views/web/home.jsp");
-    	rd.forward(request,response);
+        request.setAttribute("model", userModel);
+        final RequestDispatcher rd = request.getRequestDispatcher("/views/web/home.jsp");
+        rd.forward(request, response);
     }
-	
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    protected void doPost(final HttpServletRequest request, final HttpServletResponse response)
+            throws ServletException, IOException {
     	
     }
 }
