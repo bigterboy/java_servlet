@@ -1,5 +1,7 @@
 package com.laptrinhjavaweb.controller.web;
 
+import com.laptrinhjavaweb.model.UserModel;
+
 import java.io.IOException;
 import java.lang.ProcessBuilder.Redirect;
 
@@ -17,7 +19,11 @@ public class HomeController extends HttpServlet {
 
 	
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	RequestDispatcher rd = request.getRequestDispatcher("/views/web/home.jsp");
+        UserModel userModel = new UserModel();
+        userModel.setFullName("Truong phan qui");
+
+        request.setAttribute("model",userModel);
+        RequestDispatcher rd = request.getRequestDispatcher("/views/web/home.jsp");
     	rd.forward(request,response);
     }
 	
