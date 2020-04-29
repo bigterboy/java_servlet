@@ -8,9 +8,14 @@
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/service/INewService.java
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/model/NewModel.java
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/dao/impl/CategoryDAO.java
+/Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/dao/GenericDAO.java
+/Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/mapper/CategoryMapper.java
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/service/impl/NewService.java
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/dao/INewDAO.java
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/model/RoleModel.java
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/dao/ICategoryDAO.java
+/Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/mapper/NewMapper.java
+/Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/dao/impl/AbstractDAO.java
+/Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/mapper/RowMapper.java
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/model/CommentModel.java
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/controller/admin/HomeController.java

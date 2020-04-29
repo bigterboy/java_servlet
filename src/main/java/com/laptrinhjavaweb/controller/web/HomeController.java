@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = {"/trang-chu","/dang-nhap"})
+@WebServlet(urlPatterns = {"/trang-chu","/dang-nhap","/thoat"})
 public class HomeController extends HttpServlet {
 
     @Inject
@@ -35,32 +35,39 @@ public class HomeController extends HttpServlet {
     protected void doGet(final HttpServletRequest request, final HttpServletResponse response)
             throws ServletException, IOException {
 
-        Long categoryId = 1L;
+//        final UserModel userModel = new UserModel();
 
 
-        NewModel newModel = new NewModel();
-        newModel.setTitle("BAI VIET SO 5");
-        newModel.setContent("NOI DUNG BAI SO 5");
-        newModel.setCategoryId(1L);
 
-        final UserModel userModel = new UserModel();
-        userModel.setFullName("Truong phan qui");
-
-
-        request.setAttribute("categories",categoryService.findAll());
-//        request.setAttribute("news",newService.findByCategoryId(categoryId));
+//        request.setAttribute("categories",categoryService.findAll());
+////        request.setAttribute("news",newService.findByCategoryId(categoryId));
+//
+//
+////        request.setAttribute("model", newService.findByCategoryId(categoryId));
+//
+//        request.setAttribute("test",newService.save(newModel));
 
 
-//        request.setAttribute("model", newService.findByCategoryId(categoryId));
+        String action = request.getParameter("action");
 
-        request.setAttribute("test",newService.save(newModel));
+        if(action != null && action.equals("login") ){
+            RequestDispatcher rd = request.getRequestDispatcher("/views/login.jsp");
+            rd.forward(request, response);
+        }else if(action != null && action.equals("logout") ){
 
-        final RequestDispatcher rd = request.getRequestDispatcher("/views/web/home.jsp");
-        rd.forward(request, response);
+        }else{
+            RequestDispatcher rd = request.getRequestDispatcher("/views/web/home.jsp");
+            rd.forward(request, response);
+        }
+
     }
 
     protected void doPost(final HttpServletRequest request, final HttpServletResponse response)
             throws ServletException, IOException {
+//        String action = request.getParameter("action");
+//        if(action != null && action.equals("login") ){
+//            UserModel userModel = FormU
+//        }
     	
     }
 }
