@@ -1,5 +1,7 @@
 package com.laptrinhjavaweb.controller.admin.api;
 
+import com.laptrinhjavaweb.utils.HttpUtil;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,6 +14,10 @@ public class NewAPI extends HttpServlet {
 
     protected void doPost(final HttpServletRequest request, final HttpServletResponse response)
             throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setContentType("application/json");
+
+        HttpUtil.of(request.getReader());
 
     }
     protected void doPut(final HttpServletRequest request, final HttpServletResponse response)
