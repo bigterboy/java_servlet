@@ -6,5 +6,6 @@ import com.laptrinhjavaweb.model.NewModel;
 import java.util.List;
 
 public interface INewService {
-    List<NewModel > findByCategoryId(Long categoryId);
+    List<NewModel> findByCategoryId(Long categoryId);
+    Long save(NewModel newModel);
 }

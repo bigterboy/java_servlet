@@ -17,6 +17,7 @@
 
             <h1 class="my-4">Shop Name</h1>
             <h1>${categories}</h1>
+            <h1>${test}</h1>
 <%--            <h1>${model.getFullName()}</h1>--%>
             <div class="list-group">
                 <a href="#" class="list-group-item">Category 1</a>
