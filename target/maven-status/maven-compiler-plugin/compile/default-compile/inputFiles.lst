@@ -1,6 +1,7 @@
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/model/UserModel.java
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/service/ICategoryService.java
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/model/AbstractModel.java
+/Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/controller/admin/api/NewAPI.java
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/service/impl/CategoryService.java
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/controller/web/HomeController.java
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/dao/impl/NewDAO.java
@@ -17,5 +18,6 @@
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/mapper/NewMapper.java
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/dao/impl/AbstractDAO.java
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/mapper/RowMapper.java
+/Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/utils/HttpUtil.java
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/model/CommentModel.java
 /Users/macbook/Desktop/work/java/servlet/src/main/java/com/laptrinhjavaweb/controller/admin/HomeController.java

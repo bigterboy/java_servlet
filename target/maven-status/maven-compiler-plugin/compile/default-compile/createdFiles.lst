@@ -5,10 +5,12 @@ com/laptrinhjavaweb/dao/INewDAO.class
 com/laptrinhjavaweb/model/NewModel.class
 com/laptrinhjavaweb/service/impl/NewService.class
 com/laptrinhjavaweb/model/CommentModel.class
+com/laptrinhjavaweb/controller/admin/api/NewAPI.class
 com/laptrinhjavaweb/model/AbstractModel.class
 com/laptrinhjavaweb/dao/impl/CategoryDAO.class
 com/laptrinhjavaweb/model/CategoryModel.class
 com/laptrinhjavaweb/service/ICategoryService.class
+com/laptrinhjavaweb/utils/HttpUtil.class
 com/laptrinhjavaweb/mapper/RowMapper.class
 com/laptrinhjavaweb/model/UserModel.class
 com/laptrinhjavaweb/mapper/NewMapper.class
