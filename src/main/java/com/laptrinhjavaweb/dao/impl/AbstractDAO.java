@@ -3,6 +3,7 @@ package com.laptrinhjavaweb.dao.impl;
 import com.laptrinhjavaweb.dao.GenericDAO;
 import com.laptrinhjavaweb.mapper.RowMapper;
 
+import java.lang.reflect.Type;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -69,8 +70,8 @@ public class AbstractDAO<T> implements GenericDAO<T> {
         Connection connection = null;
         PreparedStatement statement = null;
         try {
-            connection.setAutoCommit(false);
             connection = getConnection();
+            connection.setAutoCommit(false);
             statement = connection.prepareStatement(sql);
             setParameter(statement, parameters);
             statement.executeUpdate();
@@ -157,6 +158,8 @@ public class AbstractDAO<T> implements GenericDAO<T> {
                     statement.setInt(index, (Integer) parameter);
                 } else if (parameter instanceof Timestamp) {
                     statement.setTimestamp(index, (Timestamp) parameter);
+                }else if (parameter == null) {
+                    statement.setNull(index, Types.NULL);
                 }
             }
         } catch (SQLException e) {

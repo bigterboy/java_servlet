@@ -7,7 +7,16 @@ public class NewModel extends AbstractModel {
 	private String shortDescription;
 	private String content;
 	private Long categoryId;
-	
+	private long[] ids;
+
+	public long[] getIds() {
+		return ids;
+	}
+
+	public void setIds(long[] ids) {
+		this.ids = ids;
+	}
+
 	public String getTitle() {
 		return title;
 	}

@@ -9,4 +9,6 @@ public interface INewService {
 //    NewModel findOne(Long id);
     List<NewModel> findByCategoryId(Long categoryId);
     NewModel save(NewModel newModel);
+    NewModel update(NewModel updateNew);
+    void delete(long[] ids);
 }

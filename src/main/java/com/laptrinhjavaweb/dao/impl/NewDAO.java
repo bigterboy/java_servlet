@@ -25,7 +25,7 @@ public class NewDAO extends AbstractDAO<NewModel> implements INewDAO {
     @Override
     public Long save(NewModel newModel) {
         String sql = "insert into news(title,content,categoryid) values(?,?,?)";
-        return insert(sql,newModel.getTitle(),newModel.getContent(),newModel.getCategoryId());
+        return insert(sql, newModel.getTitle(), newModel.getContent(), newModel.getCategoryId());
     }
 
     @Override
@@ -34,6 +34,24 @@ public class NewDAO extends AbstractDAO<NewModel> implements INewDAO {
         List<NewModel> newModels = query(sql, new NewMapper(), id);
 
         return newModels.isEmpty() ? null : newModels.get(0);
+    }
+
+    @Override
+    public void update(NewModel updateNew) {
+        StringBuilder sql = new StringBuilder("UPDATE news set title = ?, thumbnail = ?,");
+        sql.append("shortdecription = ?, content = ?,categoryId = ?,");
+        sql.append("createddate = ? ,createdby = ? where id = ? ");
+        update(sql.toString(), updateNew.getTitle(),
+                updateNew.getThumbnail(), updateNew.getShortDescription(),
+                updateNew.getContent(), updateNew.getCategoryId(),
+                updateNew.getCreatedDate(), updateNew.getCreatedBy(), updateNew.getId());
+
+    }
+
+    @Override
+    public void delete(long id) {
+        String sql = "Delete from news where id = ?";
+        update(sql,id);
     }
 
 //    @Override

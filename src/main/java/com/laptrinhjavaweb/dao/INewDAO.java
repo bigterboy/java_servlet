@@ -10,4 +10,6 @@ public interface INewDAO{
     List<NewModel> findByCategoryId(Long categoryId);
     Long save(NewModel newModel);
     NewModel findOne(Long id);
+    void update(NewModel updateNew);
+    void delete(long id);
 }
