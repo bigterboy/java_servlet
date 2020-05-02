@@ -12,4 +12,6 @@ public interface INewDAO{
     NewModel findOne(Long id);
     void update(NewModel updateNew);
     void delete(long id);
+    List<NewModel> findAll(Integer offset, Integer limit);
+    int getTotalItem();
 }

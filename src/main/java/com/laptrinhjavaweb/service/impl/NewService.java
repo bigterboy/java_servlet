@@ -6,6 +6,7 @@ import com.laptrinhjavaweb.model.NewModel;
 import com.laptrinhjavaweb.service.INewService;
 
 import javax.inject.Inject;
+import java.sql.Timestamp;
 import java.util.List;
 
 public class NewService implements INewService {
@@ -26,6 +27,10 @@ public class NewService implements INewService {
 
     @Override
     public NewModel save(NewModel newModel) {
+
+        newModel.setCreatedDate(new Timestamp(System.currentTimeMillis()));
+        newModel.setCreatedBy("QUI");
+
         Long newId = newDAO.save(newModel);
 
         return newDAO.findOne(newId);
@@ -51,5 +56,15 @@ public class NewService implements INewService {
         for(long id : ids ){
             newDAO.delete(id) ;
         }
+    }
+
+    @Override
+    public List<NewModel> findAll(Integer offset, Integer limit) {
+        return newDAO.findAll(offset,limit);
+    }
+
+    @Override
+    public int getTotalItem() {
+         return newDAO.getTotalItem();
     }
 }
